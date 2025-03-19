@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main (){
-    /*DECLARAÇÕES DE VARIAVEIS*/
+    /*DECLARAÇÕES DE VARIAVEIS CARTA 1*/
     char estado [100];
     char codigo [4];
     char cidade [100];
@@ -10,6 +10,7 @@ int main (){
     float pib;
     int turistico;
 
+    /*DECLARAÇÕES DE VARIAVEIS CARTA 2*/
     char ESTADOS [100];
     char CODIGOS [4];
     char CIDADES [100];
@@ -69,7 +70,7 @@ int main (){
     printf ("\n \n");
 
 
-    /*IMPRESSÕES DAS CARTAS*/
+    /*IMPRESSÕES DA CARTA 1*/
     printf ("Carta 1! \n");
     printf("Estado: %s \n", &estado);
     printf("Código: %s \n", &codigo);
@@ -80,6 +81,7 @@ int main (){
     printf("Número de Pontos Turísticos: %d \n", turistico);
     printf("\n \n");
 
+    /*IMPRESSÕES DA CARTA 2*/
     printf ("Carta 2! \n");
     printf("Estado: %s \n", &ESTADOS);
     printf("Código: %s \n", &CODIGOS);
