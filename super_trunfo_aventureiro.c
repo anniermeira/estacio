@@ -27,7 +27,8 @@ int main (){
     printf("Informe a área em km²:\n");
     scanf("%f", &area01);
     printf("Informe o PIB:\n");
-    scanf("%f \n", &pib01);
+    scanf("%f", &pib01);
+    printf("\n");
     
     
     /*INFORMAÇÕES DA SEGUNDA CARTA*/
@@ -79,8 +80,18 @@ int main (){
     printf("Pontos turísticos: %d\n", pontos02);
     printf("Densidade populacional: %.2f hab/km²\n", densidade02);
     printf("PIB per Capita: %.2f\n", pib_per_capita02);
+    printf("\n");
 
-    printf("FINALIZADO! DADOS INFORMADOS DAS CARTAS 1 E 2 ESTÃO ACIMA.\n");
+    printf("FINALIZADO! DADOS INFORMADOS DAS CARTAS 1 E 2 ESTÃO ACIMA.\n \n");
+
+    /*PARA INFORMAR A CARTA VENCEDORA*/
+    printf("CARTA 1: %d\n", habitantes01);
+    printf("CARTA 2: %d\n", habitantes02);
+    if (habitantes01 > habitantes02) {
+      printf("Resultado: CARTA 1: %s venceu! \n", cidade01);
+      } else {
+        printf("Resultado: CARTA 2: %s venceu! \n", cidade02);
+      };
 
     return 0;
 }
