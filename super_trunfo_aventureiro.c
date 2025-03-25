@@ -84,14 +84,23 @@ int main (){
 
     printf("FINALIZADO! DADOS INFORMADOS DAS CARTAS 1 E 2 ESTÃO ACIMA.\n \n");
 
-    /*PARA INFORMAR A CARTA VENCEDORA*/
+    //SE O ATRIBUTO FOR POPULAÇÃO
     printf("CARTA 1: %d\n", habitantes01);
     printf("CARTA 2: %d\n", habitantes02);
     if (habitantes01 > habitantes02) {
-      printf("Resultado: CARTA 1: %s venceu! \n", cidade01);
+      printf("Resultado: CARTA 1 %s venceu! \n", cidade01);
       } else {
-        printf("Resultado: CARTA 2: %s venceu! \n", cidade02);
+        printf("Resultado: CARTA 2 %s venceu! \n", cidade02);
       };
+    
+    //SE O ATRIBUTO FOR AREA
+    printf("CARTA 1: %.2f\n", area01);
+    printf("CARTA 2: %.2f\n", area02);
+    if (area01 > area02){
+        printf("Resultado: CARTA 1 %.2f venceu! \n", area01);
+        } else {
+            printf("Resultado: CARTA 2 %.2f venceu! \n", area02);
+        };
 
     return 0;
 }
