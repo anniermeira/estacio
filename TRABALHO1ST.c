@@ -109,8 +109,8 @@ int main (){
         };
 
     //DECLARANDO A CARTA VENCEDORA PELO PODER
-    printf("CARTA 1 : %lu\n", poder01);
-    printf("CARTA 2 : %lu\n", poder02);
+    printf("CARTA 1 : %s\n", poder01);
+    printf("CARTA 2 : %s\n", poder02);
     if (poder01 > poder02) {
       printf("Resultado: CARTA 1 - %s venceu! \n", poder01);
       } else {
