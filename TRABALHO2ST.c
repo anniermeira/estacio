@@ -176,7 +176,10 @@ while (comando != 7){
           printf("O atributo escolhido foi: SUPER PODER \n");
           printf("Os poderes das cartas são iguais. \n");
          };
-    } else {
+    }else if (comando == 7){
+    //SE ELE ESCOLHER SAIR
+        printf("Você escolheu sair! \n");
+          } else {
         printf("A OPÇÃO DIGITADA É INVALIDA. \n");
     };
 };
