@@ -8,5 +8,14 @@ int main() {
         printf("Direita\n");
     }
 
+    //USANDO WHILE - BISPO: 5 casas na diagonal para cima e à direita
+    int bispo = 5;
+    int contadorBispo = 0;
+    printf("\nMovimento do Bispo:\n");
+    while (contadorBispo < bispo) {
+        printf("Cima, direita\n");
+        contadorBispo++;
+    }
+
     return 0;
 }
