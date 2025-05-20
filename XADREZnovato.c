@@ -16,6 +16,15 @@ int main() {
         printf("Cima, direita\n");
         contadorBispo++;
     }
+    
+    //USANDO DO-WHILE - RAINHA: 8 casas para a esquerda
+    int rainha = 8;
+    int contadorRainha = 0;
+    printf("\nMovimento da Rainha:\n");
+    do {
+        printf("Esquerda\n");
+        contadorRainha++;
+    } while (contadorRainha < rainha);
 
     return 0;
 }
