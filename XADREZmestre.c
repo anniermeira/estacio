@@ -24,5 +24,6 @@ void moverBispoRecursivo(int passos) {
 // PRINCIPAIS FUNÇÕES
 int main() {
     
+    
     return 0;
 }
