@@ -4,34 +4,34 @@
 #define TAM_TAB 10
 #define TAM_HAB 5
 
-// Função para inicializar o tabuleiro com água (0) e alguns navios (3)
+//FUNÇÃO PARA INICIAR O TABULEIRO COM ÁGUA = 0 E NAVIOS = 3
 void inicializarTabuleiro(int tabuleiro[TAM_TAB][TAM_TAB]) {
     for (int i = 0; i < TAM_TAB; i++) {
         for (int j = 0; j < TAM_TAB; j++) {
-            tabuleiro[i][j] = 0; // Água
+            tabuleiro[i][j] = 0; //ÁGUA
         }
     }
 
-    // Exemplos de navios fixos
+    //EXEMPLO DE NAVIOS FIXOS
     tabuleiro[2][2] = 3;
     tabuleiro[4][4] = 3;
     tabuleiro[6][6] = 3;
 }
 
-// Exibir o tabuleiro com caracteres simbólicos
+//EXIBIR TABULEIRO COM CARACTERIS SIMBÓLICOS
 void exibirTabuleiro(int tabuleiro[TAM_TAB][TAM_TAB]) {
     for (int i = 0; i < TAM_TAB; i++) {
         for (int j = 0; j < TAM_TAB; j++) {
-            if (tabuleiro[i][j] == 0) printf("~ ");     // Água
-            else if (tabuleiro[i][j] == 3) printf("N "); // Navio
-            else if (tabuleiro[i][j] == 5) printf("* "); // Habilidade
-            else printf("? "); // Qualquer outro caso
+            if (tabuleiro[i][j] == 0) printf("~ ");     //ÁGUA
+            else if (tabuleiro[i][j] == 3) printf("N "); //NAVIO
+            else if (tabuleiro[i][j] == 5) printf("* "); //HABILIDADE
+            else printf("? "); //QUALQUER OUTRA SITUAÇÃO
         }
         printf("\n");
     }
 }
 
-// Criar matriz de habilidade: Cone (forma de pirâmide invertida)
+//CRIA HABILIDADE CONE (forma de pirâmide invertida)
 void criarCone(int cone[TAM_HAB][TAM_HAB]) {
     for (int i = 0; i < TAM_HAB; i++) {
         for (int j = 0; j < TAM_HAB; j++) {
@@ -40,7 +40,7 @@ void criarCone(int cone[TAM_HAB][TAM_HAB]) {
     }
 }
 
-// Criar matriz de habilidade: Cruz
+//CRIA HABILIDADE CRUZ
 void criarCruz(int cruz[TAM_HAB][TAM_HAB]) {
     for (int i = 0; i < TAM_HAB; i++) {
         for (int j = 0; j < TAM_HAB; j++) {
@@ -49,7 +49,7 @@ void criarCruz(int cruz[TAM_HAB][TAM_HAB]) {
     }
 }
 
-// Criar matriz de habilidade: Octaedro (losango)
+//CRIA HABILIDADE OCTAEDRO (losango)
 void criarOctaedro(int oct[TAM_HAB][TAM_HAB]) {
     for (int i = 0; i < TAM_HAB; i++) {
         for (int j = 0; j < TAM_HAB; j++) {
@@ -58,7 +58,7 @@ void criarOctaedro(int oct[TAM_HAB][TAM_HAB]) {
     }
 }
 
-// Aplica matriz de habilidade no tabuleiro na posição (linhaOrigem, colOrigem)
+//APLICA MATRIZ DE HABILIDADE NO TABULEIRO (linhaOrigem, colOrigem)
 void aplicarHabilidade(int tabuleiro[TAM_TAB][TAM_TAB], int habilidade[TAM_HAB][TAM_HAB], int linhaOrigem, int colOrigem) {
     for (int i = 0; i < TAM_HAB; i++) {
         for (int j = 0; j < TAM_HAB; j++) {
@@ -68,7 +68,7 @@ void aplicarHabilidade(int tabuleiro[TAM_TAB][TAM_TAB], int habilidade[TAM_HAB][
 
                 if (linhaTab >= 0 && linhaTab < TAM_TAB && colTab >= 0 && colTab < TAM_TAB) {
                     if (tabuleiro[linhaTab][colTab] == 0) {
-                        tabuleiro[linhaTab][colTab] = 5; // Marca como área de habilidade
+                        tabuleiro[linhaTab][colTab] = 5; //MARCA COMO ÁREA DE HABILIDADE
                     }
                 }
             }
@@ -87,12 +87,12 @@ int main() {
     criarCruz(cruz);
     criarOctaedro(octaedro);
 
-    // Aplicar habilidades em posições diferentes
-    aplicarHabilidade(tabuleiro, cone, 2, 5);       // Cone com origem em (2,5)
-    aplicarHabilidade(tabuleiro, cruz, 5, 5);       // Cruz com origem em (5,5)
-    aplicarHabilidade(tabuleiro, octaedro, 7, 2);   // Octaedro com origem em (7,2)
+    //APLICA HABILIDADE EM OUTRA POSIÇÃO
+    aplicarHabilidade(tabuleiro, cone, 2, 5);       //CONE (2,5)
+    aplicarHabilidade(tabuleiro, cruz, 5, 5);       //CRUZ (5,5)
+    aplicarHabilidade(tabuleiro, octaedro, 7, 2);   //OCTAEDRO (7,2)
 
-    // Exibir tabuleiro final
+    //MOSTRA TABULEIRO
     printf("Tabuleiro com habilidades aplicadas:\n");
     exibirTabuleiro(tabuleiro);
 
